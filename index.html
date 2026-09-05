@@ -12,6 +12,7 @@
 
 /* ============ TOKENS ============ */
 :root {
+  --logo-invert: none;
   --ground: #faf8f0;
   --surface: #ffffff;
   --ink: #16201c;
@@ -53,6 +54,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    --logo-invert: invert(1);
     --ground: #14180f;
     --surface: #1c2116;
     --ink: #f0ede0;
@@ -80,6 +82,7 @@
 }
 
 :root[data-theme="dark"] {
+  --logo-invert: invert(1);
   --ground: #14180f;
   --surface: #1c2116;
   --ink: #f0ede0;
@@ -337,7 +340,6 @@ footer.wash-contact .footer-links a { color: var(--wash-contact-ink); border-col
 footer.wash-contact .footer-links a:hover { color: var(--wash-highlight); border-color: var(--wash-highlight); }
 footer.wash-contact .footer-stamp { color: color-mix(in srgb, var(--wash-contact-ink) 60%, transparent); border-color: color-mix(in srgb, var(--wash-contact-ink) 20%, transparent); }
 footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-contact-ink) 20%, transparent); }
-footer.wash-contact .link-icon-logo { filter: invert(1); }
 .section-inner {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -465,6 +467,7 @@ footer.wash-contact .link-icon-logo { filter: invert(1); }
 .link-icon.link-icon-logo {
   width: auto;
   height: 20px;
+  filter: var(--logo-invert);
 }
 .feature-link:hover { color: var(--accent); }
 
