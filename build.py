@@ -9,6 +9,7 @@ def b64(path, mime):
 IMAGES = {
     "PROFILE": b64("profile.jpg", "image/jpeg"),
     "CABINET": b64("cabinet.jpg", "image/jpeg"),
+    "CABINET_OPEN": b64("cabinet_open.jpg", "image/jpeg"),
     "CART_BUILD": b64("cart_build.jpg", "image/jpeg"),
     "CART_FINISHED": b64("cart_finished.jpg", "image/jpeg"),
     "CART_CAD1": b64("cart_cad1.jpg", "image/jpeg"),

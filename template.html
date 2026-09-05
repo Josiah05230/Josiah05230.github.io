@@ -294,6 +294,7 @@ h1, h2, h3 { text-wrap: balance; margin: 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 12%;
   display: block;
 }
 
@@ -747,6 +748,7 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
 
 .cad-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .cad-pair .card-media img { aspect-ratio: 1; }
+.cad-pair.tall .card-media img { aspect-ratio: 3/4; }
 
 .gh-note {
   margin-top: 36px;
@@ -1059,7 +1061,10 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
       <div class="card-grid">
 
         <div class="card">
-          <div class="card-media"><img src="{{CABINET}}" alt="Finished shop storage cabinet, floor to ceiling with black handles"></div>
+          <div class="cad-pair tall">
+            <div class="card-media"><img src="{{CABINET}}" alt="Finished shop storage cabinet, floor to ceiling with black handles"></div>
+            <div class="card-media"><img src="{{CABINET_OPEN}}" alt="Cabinet open, showing small-parts organizers and storage bins inside"></div>
+          </div>
           <div class="card-body">
             <span class="card-tag">Storage: Fusion 360 and Plywood</span>
             <h3 class="card-title">Shop Storage Cabinet</h3>
