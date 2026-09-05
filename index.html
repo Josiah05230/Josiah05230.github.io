@@ -143,7 +143,7 @@ h1, h2, h3 { text-wrap: balance; margin: 0; }
 
 .headerbar-row {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 24px;
   padding: 16px 0;
@@ -184,25 +184,8 @@ h1, h2, h3 { text-wrap: balance; margin: 0; }
 .hb-nav a:hover { color: var(--ink); }
 .hb-nav a:hover::after { right: 0; }
 
-.hb-status {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: var(--steel);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  white-space: nowrap;
-}
-.hb-dot {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent);
-  flex-shrink: 0;
-}
 @media (max-width: 720px) {
-  .hb-status { display: none; }
-  .headerbar-row { grid-template-columns: auto 1fr; gap: 16px; }
+  .headerbar-row { gap: 16px; }
   .hb-nav { justify-content: flex-start; overflow-x: auto; }
 }
 
@@ -350,7 +333,6 @@ footer.wash-contact {
   background: var(--wash-contact);
   color: var(--wash-contact-ink);
   --wash-highlight: var(--accent2-strong);
-  --footer-icon-filter: invert(1);
 }
 footer.wash-contact .section-num { color: var(--wash-highlight); }
 footer.wash-contact .footer-links a { color: var(--wash-contact-ink); border-color: color-mix(in srgb, var(--wash-contact-ink) 40%, transparent); }
@@ -432,14 +414,6 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
 
 .xp-role { font-weight: 700; font-size: 1.08rem; }
 .xp-org { color: var(--wash-highlight, var(--accent)); font-weight: 600; }
-.xp-loc {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: var(--steel);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-top: 2px;
-}
 .xp-desc { margin-top: 10px; color: var(--ink-soft); max-width: 62ch; }
 
 /* ============ PROJECTS ============ */
@@ -755,10 +729,13 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
 .cad-pair.tall .card-media img { aspect-ratio: 3/4; }
 
 .gh-note {
-  margin-top: 36px;
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 1px solid var(--wash-projects-line, var(--line));
   font-family: var(--mono);
   font-size: 0.82rem;
   color: var(--ink-soft);
+  text-align: center;
 }
 .gh-note a { color: var(--wash-highlight, var(--accent)); border-bottom: 1px solid var(--wash-highlight, var(--accent)); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
 
@@ -808,7 +785,6 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
   gap: 7px;
 }
 .footer-links a:hover { color: var(--accent); border-color: var(--accent); }
-.footer-links .link-icon { filter: var(--footer-icon-filter, none); }
 
 .footer-stamp {
   padding-top: 20px;
@@ -850,7 +826,6 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="hb-status"><span class="hb-dot"></span>Fargo, ND</div>
   </div>
 </header>
 
@@ -910,7 +885,6 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
           <div>
             <div class="xp-role">Research &amp; Advanced Engineering</div>
             <div class="xp-org">Precision Planting</div>
-            <div class="xp-loc">Fargo, ND</div>
             <p class="xp-desc">Take products from concept through prototyping, testing, and optimization on small teams of up to five engineers, owning a piece of the work end to end.</p>
           </div>
         </div>
@@ -919,7 +893,6 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
           <div>
             <div class="xp-role">Foreman</div>
             <div class="xp-org">Faul Building and Repair</div>
-            <div class="xp-loc">Fargo, ND</div>
             <p class="xp-desc">Ran a crew of up to eight, training and delegating. Most of what I know about managing people actually came from this job.</p>
           </div>
         </div>
@@ -928,7 +901,6 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
           <div>
             <div class="xp-role">High School Intern</div>
             <div class="xp-org">Appareo</div>
-            <div class="xp-loc">Fargo, ND</div>
             <p class="xp-desc">Production data analysis and manufacturing quality checks, running Cpk and Ppk against tolerance and standard deviation.</p>
           </div>
         </div>
