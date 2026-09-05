@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Josiah Holder - Resume</title>
+<style>
+@page { size: Letter; margin: 0.55in 0.65in; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #1a1a1a;
+  font-size: 10.3pt;
+  line-height: 1.42;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 2px solid #16201c;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+h1 {
+  margin: 0;
+  font-size: 22pt;
+  letter-spacing: 0.02em;
+}
+.title {
+  margin: 2px 0 0;
+  font-size: 10.5pt;
+  color: #454f49;
+  font-style: italic;
+}
+.contact {
+  text-align: right;
+  font-family: 'Courier New', monospace;
+  font-size: 9pt;
+  color: #333;
+  line-height: 1.6;
+}
+.contact a { color: #333; text-decoration: none; }
+
+section { margin-bottom: 13px; }
+h2 {
+  font-size: 10.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1f8f52;
+  border-bottom: 1px solid #cfcabb;
+  padding-bottom: 3px;
+  margin: 0 0 8px;
+}
+
+.summary { margin: 0; }
+
+.xp-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.xp-role { font-weight: 700; }
+.xp-org { font-style: italic; color: #333; }
+.xp-period { font-family: 'Courier New', monospace; font-size: 9pt; color: #555; white-space: nowrap; }
+.xp-desc { margin: 3px 0 0; }
+.xp-item + .xp-item { margin-top: 9px; }
+
+.proj-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+}
+.proj-item { break-inside: avoid; }
+.proj-title { font-weight: 700; }
+.proj-tag { font-size: 8.7pt; color: #555; display: block; margin: 1px 0 2px; }
+.proj-desc { margin: 0; }
+
+.edu-row { display: flex; justify-content: space-between; }
+.edu-degree { font-weight: 700; }
+.edu-school { font-style: italic; color: #333; }
+
+footer {
+  margin-top: 16px;
+  padding-top: 8px;
+  border-top: 1px solid #cfcabb;
+  font-family: 'Courier New', monospace;
+  font-size: 8pt;
+  color: #777;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Josiah Holder</h1>
+    <p class="title">Mechanical Engineer &amp; Hands-On Builder</p>
+  </div>
+  <div class="contact">
+    josiahholder523@gmail.com<br>
+    linkedin.com/in/josiahholder523<br>
+    github.com/Josiah05230<br>
+    Fargo, ND
+  </div>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p class="summary">Mechanical engineer in Research and Advanced Engineering at Precision Planting, taking products from concept through prototyping and testing. Co-founder of GrainWave Technologies, building wireless control hardware and the software that supports it. Builds things at home when the garage needs something, usually modeling it in CAD first.</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="xp-item">
+    <div class="xp-row">
+      <span class="xp-role">Research &amp; Advanced Engineering <span class="xp-org">- Precision Planting</span></span>
+      <span class="xp-period">2023 - Present</span>
+    </div>
+    <p class="xp-desc">Take products from concept through prototyping, testing, and optimization on small teams of up to five engineers, owning a piece of the work end to end.</p>
+  </div>
+
+  <div class="xp-item">
+    <div class="xp-row">
+      <span class="xp-role">Foreman <span class="xp-org">- Faul Building and Repair</span></span>
+      <span class="xp-period">2021</span>
+    </div>
+    <p class="xp-desc">Ran a crew of up to eight, training and delegating.</p>
+  </div>
+
+  <div class="xp-item">
+    <div class="xp-row">
+      <span class="xp-role">High School Intern <span class="xp-org">- Appareo</span></span>
+      <span class="xp-period">2019</span>
+    </div>
+    <p class="xp-desc">Production data analysis and manufacturing quality checks, running Cpk and Ppk against tolerance and standard deviation.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <div class="proj-grid">
+    <div class="proj-item">
+      <span class="proj-title">PowerSync</span>
+      <span class="proj-tag">Mechatronics - Wireless PTO Control</span>
+      <p class="proj-desc">Wireless remote for tractor PTO control, designed and built end to end, remote and controller both.</p>
+    </div>
+    <div class="proj-item">
+      <span class="proj-title">GrainWaveLink</span>
+      <span class="proj-tag">Software - Firmware Delivery</span>
+      <p class="proj-desc">Updates every PowerSync device over Bluetooth, no cable or app store, works offline once downloaded.</p>
+    </div>
+    <div class="proj-item">
+      <span class="proj-title">GrainWave Partners</span>
+      <span class="proj-tag">Software - Dealer Ordering Portal</span>
+      <p class="proj-desc">System GrainWave's dealers use to order parts, replacing a shared spreadsheet, plus parts catalog and returns.</p>
+    </div>
+    <div class="proj-item">
+      <span class="proj-title">Gladiator</span>
+      <span class="proj-tag">Mechatronics - Combat Robot</span>
+      <p class="proj-desc">Wedge-style combat robot for Robot Smashing League, designed to get under opponents and flip them.</p>
+    </div>
+    <div class="proj-item">
+      <span class="proj-title">Shop Storage Cabinet</span>
+      <span class="proj-tag">Hardware - Fusion 360 and Plywood</span>
+      <p class="proj-desc">2x3x6 ft cabinet planned in CAD to fit filament, motors, boards, and CNC bits with no wasted space.</p>
+    </div>
+    <div class="proj-item">
+      <span class="proj-title">Coffee Cart</span>
+      <span class="proj-tag">Hardware - Modeled and Built</span>
+      <p class="proj-desc">Beverage cart for church use, sized to a tight footprint and modeled first before any wood was cut.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="edu-row">
+    <span class="edu-degree">B.S. Mechanical Engineering <span class="edu-school">- North Dakota State University</span></span>
+    <span class="xp-period">December 2024</span>
+  </div>
+</section>
+
+<footer>Last updated 2026</footer>
+
+</body>
+</html>
