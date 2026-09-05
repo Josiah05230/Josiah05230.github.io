@@ -496,6 +496,10 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
   display: inline-block;
   vertical-align: middle;
 }
+.link-icon.link-icon-logo {
+  width: auto;
+  height: 20px;
+}
 .feature-link:hover { color: var(--accent); }
 
 /* ---- Shared: media panel wrapper + caption ---- */
@@ -938,7 +942,6 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
     <div class="section-label">
       <span class="section-num">03</span>
       <h2 class="section-title">Projects</h2>
-      <p class="section-note">Product, firmware, and the systems behind them at GrainWave Technologies, plus what gets built when the garage needs something.</p>
     </div>
     <div class="section-body">
 
@@ -980,9 +983,9 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
         </div>
         <div>
           <h3 class="feature-title">PowerSync</h3>
-          <span class="feature-tag">Product: Wireless PTO Control</span>
+          <span class="feature-tag">Mechatronics &middot; Wireless PTO Control</span>
           <p class="feature-desc">A wireless remote for tractor PTO control that I designed and built end to end, remote and controller both.</p>
-          <a class="feature-link" href="https://grainwavetech.com" target="_blank" rel="noopener"><img class="link-icon" src="{{GRAINWAVE_LOGO}}" alt="">grainwavetech.com &rarr;</a>
+          <a class="feature-link" href="https://grainwavetech.com" target="_blank" rel="noopener"><img class="link-icon link-icon-logo" src="{{GRAINWAVE_ICON}}" alt="">grainwavetech.com &rarr;</a>
         </div>
       </div>
 
@@ -1012,7 +1015,7 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
         </div>
         <div>
           <h3 class="feature-title">GrainWaveLink</h3>
-          <span class="feature-tag">Product: Firmware Delivery</span>
+          <span class="feature-tag">Software &middot; Firmware Delivery</span>
           <p class="feature-desc">Updates every PowerSync device over Bluetooth, no cable or app store, and works offline once it's downloaded an update.</p>
         </div>
       </div>
@@ -1051,12 +1054,12 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
         </div>
         <div>
           <h3 class="feature-title">GrainWave Partners</h3>
-          <span class="feature-tag">Internal Tool: Dealer Ordering Portal</span>
+          <span class="feature-tag">Software &middot; Dealer Ordering Portal</span>
           <p class="feature-desc">The system GrainWave's dealers use to order parts, replacing a shared spreadsheet, plus the parts catalog and returns.</p>
         </div>
       </div>
 
-      <div class="grid-title">Also built: personal projects, modeled and made</div>
+      <div class="grid-title">Also built: hardware and mechatronics on the side</div>
 
       <div class="card-grid">
 
@@ -1066,7 +1069,7 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
             <div class="card-media"><img src="{{CABINET_OPEN}}" alt="Cabinet open, showing small-parts organizers and storage bins inside"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag">Storage: Fusion 360 and Plywood</span>
+            <span class="card-tag">Hardware &middot; Fusion 360 and Plywood</span>
             <h3 class="card-title">Shop Storage Cabinet</h3>
             <p class="card-desc">A 2&times;3&times;6 ft cabinet planned in CAD to fit filament, motors, boards, and CNC bits into off-the-shelf organizers with no wasted space.</p>
             <div class="card-specs">
@@ -1079,7 +1082,7 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
         <div class="card">
           <div class="card-media"><img src="{{CART_FINISHED}}" alt="Finished coffee cart with dark top and pine paneling"></div>
           <div class="card-body">
-            <span class="card-tag">Furniture: Modeled and Built</span>
+            <span class="card-tag">Hardware &middot; Modeled and Built</span>
             <h3 class="card-title">Coffee Cart</h3>
             <p class="card-desc">A beverage cart for church use, sized to a tight footprint and modeled first so the dimensions were signed off before any wood was cut.</p>
             <div class="card-specs">
@@ -1087,6 +1090,22 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
                 <div class="card-media"><img src="{{CART_CAD1}}" alt="3D CAD render of coffee cart, front angle"></div>
                 <div class="card-media"><img src="{{CART_CAD2}}" alt="3D CAD render of coffee cart, rear angle"></div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cad-pair">
+            <div class="card-media"><img src="{{GLADIATOR_ACTION}}" alt="Gladiator combat robot flipping an opponent bot mid-match"></div>
+            <div class="card-media"><img src="{{GLADIATOR_MATCH}}" alt="Overhead view of the arena during a Gladiator match, Robot Smashing League"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Mechatronics &middot; Combat Robot</span>
+            <h3 class="card-title">Gladiator</h3>
+            <p class="card-desc">A wedge-style combat robot built for Robot Smashing League, designed to get under opponents and flip them.</p>
+            <div class="card-specs">
+              <span><strong>Process:</strong> CAD design &rarr; 3D printed shell &rarr; competition build</span>
+              <span><strong>Class:</strong> Robot Smashing League</span>
             </div>
           </div>
         </div>
@@ -1112,7 +1131,7 @@ footer.wash-contact .footer-body { border-color: color-mix(in srgb, var(--wash-c
       <div class="footer-links">
         <a href="mailto:josiahholder523@gmail.com"><svg class="link-icon"><use href="#icon-email"/></svg>josiahholder523@gmail.com</a>
         <a href="https://linkedin.com/in/josiahholder523" target="_blank" rel="noopener"><svg class="link-icon"><use href="#icon-linkedin"/></svg>LinkedIn</a>
-        <a href="https://grainwavetech.com" target="_blank" rel="noopener"><img class="link-icon" src="{{GRAINWAVE_LOGO}}" alt="">GrainWave Technologies</a>
+        <a href="https://grainwavetech.com" target="_blank" rel="noopener"><img class="link-icon link-icon-logo" src="{{GRAINWAVE_ICON}}" alt="">GrainWave Technologies</a>
       </div>
       <div class="footer-stamp">
         <span>Josiah Holder &middot; Fargo, ND</span>

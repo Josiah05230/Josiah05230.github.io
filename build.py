@@ -15,6 +15,9 @@ IMAGES = {
     "CART_CAD1": b64("cart_cad1.jpg", "image/jpeg"),
     "CART_CAD2": b64("cart_cad2.jpg", "image/jpeg"),
     "GRAINWAVE_LOGO": b64("grainwave_logo.png", "image/png"),
+    "GRAINWAVE_ICON": b64("grainwave_icon.png", "image/png"),
+    "GLADIATOR_ACTION": b64("gladiator_action.jpg", "image/jpeg"),
+    "GLADIATOR_MATCH": b64("gladiator_match.jpg", "image/jpeg"),
 }
 
 with open("template.html", "r") as f:
