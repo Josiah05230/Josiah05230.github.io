@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Josiah Holder | R&amp;D Engineer</title>
-<meta name="description" content="R&amp;D engineer in Fargo, ND. Sensor design, test systems, data analysis, and embedded electronics.">
+<title>Josiah Holder | Mechanical engineer. Hands-on builder.</title>
+<meta name="description" content="Mechanical engineer and hands-on builder in Fargo, ND. Product design, prototyping, manufacturing, and test for agricultural equipment, plus things built in the garage.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Expanded:wght@600;700&display=swap" rel="stylesheet">
@@ -35,65 +35,39 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--ground);
-  color: var(--ink);
-  font-family: var(--sans);
-  font-size: 17px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 a { color: var(--accent); text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 h1, h2, h3 { margin: 0; text-wrap: balance; }
 p { margin: 0; }
+img { display: block; max-width: 100%; }
 .wrap { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
 @media (max-width: 600px) { .wrap { padding: 0 18px; } body { font-size: 16px; } }
 
-/* header */
 .top { border-bottom: 1px solid var(--line); background: var(--surface); }
 .top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
 .top strong { font-weight: 600; }
-.top nav { display: flex; gap: 22px; font-size: 0.95rem; }
+.top nav { display: flex; gap: 22px; font-size: 0.95rem; flex-wrap: wrap; }
 .top nav a { color: var(--ink-soft); text-decoration: none; }
 .top nav a:hover { color: var(--ink); text-decoration: underline; }
 
-/* hero */
-.hero { padding: 72px 0 64px; }
-.hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
-@media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; gap: 40px; } .hero { padding: 48px 0; } }
-.hero h1 { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 4.2vw, 3rem); line-height: 1.12; letter-spacing: -0.01em; }
-.hero p.sub { margin-top: 22px; font-size: 1.1rem; color: var(--ink-soft); max-width: 46ch; }
-.hero .cta { margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap; }
+.hero { padding: 64px 0 60px; }
+.hero .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
+@media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; gap: 36px; } .hero { padding: 40px 0; } .portrait { order: -1; max-width: 300px; } }
+.hero h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 4.6vw, 3.3rem); line-height: 1.1; letter-spacing: -0.01em; }
+.hero p.sub { margin-top: 22px; font-size: 1.12rem; color: var(--ink-soft); max-width: 46ch; }
+.hero .cta { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
 .btn { display: inline-block; padding: 11px 20px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; border: 1.5px solid var(--accent); }
 .btn.solid { background: var(--accent); color: var(--surface); }
 .btn.ghost { color: var(--accent); }
 .btn:hover { filter: brightness(1.1); }
+.portrait img { width: 100%; height: auto; max-height: 460px; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 10%; border-radius: 10px; border: 1px solid var(--line); }
 
-/* diagram */
-figure.diagram { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 18px 14px; }
-figure.diagram svg { width: 100%; height: auto; display: block; }
-figure.diagram figcaption { margin-top: 10px; font-size: 0.85rem; color: var(--ink-soft); }
-.curve { fill: none; stroke: var(--ink); stroke-width: 2.2; }
-.inband { fill: var(--band); }
-.tailfill { fill: var(--tail); opacity: 0.35; }
-.axis { stroke: var(--ink-soft); stroke-width: 1.2; }
-.spec { stroke: var(--accent); stroke-width: 1.6; stroke-dasharray: 5 4; }
-.dlabel { fill: var(--ink); font: 600 13px var(--sans); }
-.dsmall { fill: var(--ink-soft); font: 400 12px var(--sans); }
-@media (prefers-reduced-motion: no-preference) {
-  .curve { stroke-dasharray: 900; stroke-dashoffset: 900; animation: draw 1.6s ease-out 0.2s forwards; }
-  .inband, .tailfill { opacity: 0; animation: fade 0.8s ease-out 1.5s forwards; }
-  .tailfill { animation-name: fadetail; }
-}
-@keyframes draw { to { stroke-dashoffset: 0; } }
-@keyframes fade { to { opacity: 1; } }
-@keyframes fadetail { to { opacity: 0.35; } }
-
-/* sections */
 section { padding: 56px 0; border-top: 1px solid var(--line); }
 section h2 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; margin-bottom: 26px; }
+
+.about p { max-width: 62ch; font-size: 1.08rem; margin-bottom: 16px; }
+
 .two { display: grid; grid-template-columns: 200px 1fr; gap: 12px 40px; }
 @media (max-width: 720px) { .two { grid-template-columns: 1fr; } }
 .when { color: var(--ink-soft); font-size: 0.95rem; }
@@ -103,24 +77,44 @@ section h2 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; m
 .entry ul { margin: 10px 0 0; padding-left: 20px; }
 .entry li { margin-bottom: 6px; max-width: 70ch; }
 
-.work { display: grid; gap: 30px; }
+.work { display: grid; gap: 34px; }
 .item { display: grid; grid-template-columns: 200px 1fr; gap: 8px 40px; }
 @media (max-width: 720px) { .item { grid-template-columns: 1fr; } }
 .item h3 { font-size: 1.05rem; font-weight: 600; }
 .item .where { color: var(--ink-soft); font-size: 0.92rem; margin-top: 2px; }
 .item p { max-width: 68ch; }
 
-.home { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-.home div { border-left: 3px solid var(--accent); padding-left: 16px; }
-.home h3 { font-size: 1.02rem; font-weight: 600; margin-bottom: 4px; }
-.home p { color: var(--ink-soft); font-size: 0.97rem; }
+figure.diagram { margin: 22px 0 0; max-width: 460px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 16px 12px; }
+figure.diagram svg { width: 100%; height: auto; display: block; }
+figure.diagram figcaption { margin-top: 8px; font-size: 0.85rem; color: var(--ink-soft); }
+.curve { fill: none; stroke: var(--ink); stroke-width: 2.2; }
+.inband { fill: var(--band); }
+.tailfill { fill: var(--tail); opacity: 0.35; }
+.axis { stroke: var(--ink-soft); stroke-width: 1.2; }
+.spec { stroke: var(--accent); stroke-width: 1.6; stroke-dasharray: 5 4; }
+.dlabel { fill: var(--ink); font: 600 13px var(--sans); }
+.dsmall { fill: var(--ink-soft); font: 400 12px var(--sans); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--line); }
+.pair img { width: 100%; height: auto; object-fit: cover; aspect-ratio: 4 / 3; }
+.pair.tall img { aspect-ratio: 3 / 4; }
+.card .body { padding: 18px 20px 22px; }
+.card h3 { font-size: 1.08rem; font-weight: 600; margin-bottom: 6px; }
+.card p { color: var(--ink-soft); font-size: 0.97rem; }
+.card .specs { margin-top: 10px; font-size: 0.9rem; color: var(--ink-soft); display: grid; gap: 2px; }
+.card .specs strong { color: var(--ink); font-weight: 600; }
+.also { margin-top: 26px; max-width: 68ch; color: var(--ink-soft); }
 
 .skills p { margin-bottom: 8px; max-width: 75ch; }
 .skills b { font-weight: 600; }
 
+.contact .headline { font-family: var(--display); font-weight: 700; font-size: 1.3rem; margin-bottom: 14px; }
 .contact p { max-width: 52ch; margin-bottom: 18px; color: var(--ink-soft); }
 .contact .links { display: flex; gap: 22px; flex-wrap: wrap; }
 footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; border-top: 1px solid var(--line); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 </style>
 </head>
 <body>
@@ -129,8 +123,9 @@ footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; borde
   <div class="wrap">
     <strong>Josiah Holder</strong>
     <nav aria-label="Sections">
+      <a href="#about">About</a>
       <a href="#experience">Experience</a>
-      <a href="#work">Selected work</a>
+      <a href="#work">Work</a>
       <a href="#home">Built at home</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -141,33 +136,26 @@ footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; borde
 <div class="hero">
   <div class="wrap">
     <div>
-      <h1>I build the test systems that show whether a sensor works.</h1>
-      <p class="sub">R&amp;D engineer in Fargo, ND. I design agricultural sensors and the test stands, data pipelines, and embedded electronics behind them.</p>
+      <h1>Mechanical engineer. Hands-on builder.</h1>
+      <p class="sub">I design and prototype agricultural sensor hardware, build the test rigs that prove it works, and take it into production. At home, I build whatever the garage needs.</p>
       <div class="cta">
         <a class="btn solid" href="resume.pdf">Download resume</a>
-        <a class="btn ghost" href="#work">See selected work</a>
+        <a class="btn ghost" href="mailto:josiahholder523@gmail.com">Email me</a>
       </div>
     </div>
-
-    <figure class="diagram" aria-labelledby="fig-cap">
-      <svg viewBox="0 0 420 260" role="img" aria-label="A bell curve of sensor error with the region inside plus or minus 2 percent shaded green and the tails shaded orange.">
-        <!-- shaded areas: standard normal, sigma = 1.02 so that +/-2% is about 1.96 sigma -->
-        <path class="tailfill" d="M20,210 L20,209.8 L38,209.4 L56,208.6 L74,207.2 L92,204.8 L110,201 L128,195.4 L134,192.6 L134,210 Z"/>
-        <path class="tailfill" d="M286,210 L286,192.6 L292,195.4 L310,201 L328,204.8 L346,207.2 L364,208.6 L382,209.4 L400,209.8 L400,210 Z"/>
-        <path class="inband" d="M134,210 L134,192.6 L152,181 L170,160 L188,128 L206,94 L210,90 L214,94 L232,128 L250,160 L268,181 L286,192.6 L286,210 Z"/>
-        <path class="curve" d="M20,209.8 C60,209 100,205 134,192.6 C170,175 190,110 210,88 C230,110 250,175 286,192.6 C320,205 360,209 400,209.8"/>
-        <line class="axis" x1="20" y1="210" x2="400" y2="210"/>
-        <line class="spec" x1="134" y1="60" x2="134" y2="210"/>
-        <line class="spec" x1="286" y1="60" x2="286" y2="210"/>
-        <text class="dlabel" x="210" y="26" text-anchor="middle">95% of sensors inside the band</text>
-        <text class="dlabel" x="134" y="52" text-anchor="middle">-2%</text>
-        <text class="dlabel" x="286" y="52" text-anchor="middle">+2%</text>
-        <text class="dsmall" x="210" y="232" text-anchor="middle">Error versus reference</text>
-      </svg>
-      <figcaption id="fig-cap">The pass criterion I built validation systems to prove. Schematic, not measured data.</figcaption>
-    </figure>
+    <div class="portrait">
+      <img src="images/profile.jpg" alt="Portrait of Josiah Holder" width="665" height="830">
+    </div>
   </div>
 </div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p>NDSU mechanical engineering, December 2024. I work in Research and Advanced Engineering at Precision Planting, taking products from concept through prototyping, testing, and production. I spend most of my time on the bench and in the field, running the tests that prove a design works and talking with the farmers and dealers who use it.</p>
+    <p>Outside of work I build things at home when the garage needs something. It's usually just an excuse to model it in CAD first.</p>
+  </div>
+</section>
 
 <section id="experience">
   <div class="wrap">
@@ -179,10 +167,11 @@ footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; borde
         <h3>R&amp;D Engineer</h3>
         <div class="org">Precision Planting, Fargo, ND</div>
         <ul>
-          <li>Designed the validation system for an optical seed-flow sensor, giving the team the evidence to prove it met a &plusmn;2% requirement.</li>
-          <li>Cut sensor-to-sensor variance about 3x and extended measurement range about 80%.</li>
-          <li>Developed three mechanical embodiments, quoted them with multiple manufacturers, and chose the lowest-cost option with no loss in usability.</li>
-          <li>Visit farms and dealers to gather feedback, and work with suppliers and contract manufacturers on cost and end-of-line testing.</li>
+          <li>Developed three mechanical designs for an optical seed-flow sensor (injection molded, SLS printed for production, machined, and sheet cut), quoted them with multiple manufacturers, and chose the lowest-cost option with no loss in usability.</li>
+          <li>Manage CAD, models, and drawings from prototype into production, with GD&amp;T callouts and tolerance stack-up control. Tightening the design cut sensor-to-sensor variance about 3x.</li>
+          <li>Built the test stands and analysis that prove a design meets spec, including a validation system for a &plusmn;2% requirement and fluid test rigs with VFDs, blowers, pumps, flow meters, and venturi product conveying.</li>
+          <li>Design overmolded connectors and adapter harnesses, and work with suppliers and contract manufacturers on cost and end-of-line testing.</li>
+          <li>Visit farms and dealers to understand the problem and gather feedback on what to keep and improve.</li>
         </ul>
       </div>
     </div>
@@ -193,8 +182,8 @@ footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; borde
         <h3>R&amp;D Engineering Intern</h3>
         <div class="org">Appareo Systems (Intelligent Ag), Fargo, ND</div>
         <ul>
-          <li>Rescued a sensor program at risk of cancellation by taking a mechanical design from non-functional to working and building a heat map algorithm.</li>
-          <li>Owned lab and field testing, test stands, and data analysis for the project.</li>
+          <li>Rescued a sensor program at risk of cancellation. I took a mechanical design from non-functional to working, optimized it to hold accuracy across a harsh operating range, and built a heat map algorithm to finish the job.</li>
+          <li>Owned lab and field testing, test stands, and data analysis for the project, at a full engineer's workload.</li>
         </ul>
       </div>
     </div>
@@ -205,7 +194,7 @@ footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; borde
         <h3>Foreman</h3>
         <div class="org">Faul Building and Repair, Fargo, ND</div>
         <ul>
-          <li>Led a crew of up to 8 on demolition, framing, and repair jobs, and handled scheduling and customer communication.</li>
+          <li>Ran a crew of up to eight on demolition, framing, and repair jobs, training and delegating. Most of what I know about managing people actually came from this job.</li>
         </ul>
       </div>
     </div>
@@ -216,7 +205,7 @@ footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; borde
         <h3>High school intern</h3>
         <div class="org">Appareo, Fargo, ND</div>
         <ul>
-          <li>Ran manufacturing studies (CPK and PPK, fallout analysis) and worked with suppliers on inspection and quality issues for one semester.</li>
+          <li>Production data analysis and manufacturing quality checks, running Cpk and Ppk against tolerance and standard deviation.</li>
         </ul>
       </div>
     </div>
@@ -226,14 +215,6 @@ footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; borde
       <div>
         <h3>Co-founder, small business</h3>
         <ul><li>Building low-cost, easy-to-use technical solutions for farmers.</li></ul>
-      </div>
-    </div>
-
-    <div class="entry two">
-      <div class="when">December 2024</div>
-      <div>
-        <h3>B.S. Mechanical Engineering</h3>
-        <div class="org">North Dakota State University</div>
       </div>
     </div>
   </div>
@@ -246,10 +227,36 @@ footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; borde
 
       <div class="item">
         <div>
+          <h3>Sensor mechanical design</h3>
+          <div class="where">Precision Planting</div>
+        </div>
+        <p>Three full mechanical designs for an optical seed-flow sensor, made with injection molding, SLS printing for production, machining, and sheet cutting. I quoted each with multiple manufacturers and picked the lowest-cost option with no loss in ease of use. I own the CAD and drawings from prototype into production, using GD&amp;T (flatness, surface finish, ordinate dimensioning) and tolerance stack-up analysis. Tightening the design cut sensor-to-sensor variance about 3x.</p>
+      </div>
+
+      <div class="item">
+        <div>
           <h3>Sensor validation system</h3>
           <div class="where">Precision Planting</div>
         </div>
-        <p>A test stand, control software, data recording and transfer, and analysis pipeline for an optical seed-flow sensor. It produced the statistical evidence for whether the design met its &plusmn;2% requirement, and it showed that tighter tolerances and assembly changes cut sensor-to-sensor variance about 3x. I ran 50+ sensors on the bench and analyzed data from 250+ installed on farmer equipment over two seasons.</p>
+        <div>
+          <p>A test stand, control software, data recording, and analysis pipeline for the same sensor. It produced the statistical evidence for whether the design met its &plusmn;2% requirement, and extended its measurement range about 80%. I ran 50+ sensors on the bench and analyzed data from 250+ installed on farmer equipment over two seasons.</p>
+          <figure class="diagram" aria-labelledby="fig-cap">
+            <svg viewBox="0 0 420 250" role="img" aria-label="A bell curve of sensor error with the region inside plus or minus 2 percent shaded green and the tails shaded orange.">
+              <path class="tailfill" d="M20,210 L20,209.8 L38,209.4 L56,208.6 L74,207.2 L92,204.8 L110,201 L128,195.4 L134,192.6 L134,210 Z"/>
+              <path class="tailfill" d="M286,210 L286,192.6 L292,195.4 L310,201 L328,204.8 L346,207.2 L364,208.6 L382,209.4 L400,209.8 L400,210 Z"/>
+              <path class="inband" d="M134,210 L134,192.6 L152,181 L170,160 L188,128 L206,94 L210,90 L214,94 L232,128 L250,160 L268,181 L286,192.6 L286,210 Z"/>
+              <path class="curve" d="M20,209.8 C60,209 100,205 134,192.6 C170,175 190,110 210,88 C230,110 250,175 286,192.6 C320,205 360,209 400,209.8"/>
+              <line class="axis" x1="20" y1="210" x2="400" y2="210"/>
+              <line class="spec" x1="134" y1="60" x2="134" y2="210"/>
+              <line class="spec" x1="286" y1="60" x2="286" y2="210"/>
+              <text class="dlabel" x="210" y="26" text-anchor="middle">95% of sensors inside the band</text>
+              <text class="dlabel" x="134" y="52" text-anchor="middle">-2%</text>
+              <text class="dlabel" x="286" y="52" text-anchor="middle">+2%</text>
+              <text class="dsmall" x="210" y="232" text-anchor="middle">Error versus reference</text>
+            </svg>
+            <figcaption id="fig-cap">The pass criterion I built the validation system to prove. Schematic, not measured data.</figcaption>
+          </figure>
+        </div>
       </div>
 
       <div class="item">
@@ -257,23 +264,23 @@ footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; borde
           <h3>Heat map accuracy algorithm</h3>
           <div class="where">Appareo Systems (Intelligent Ag)</div>
         </div>
-        <p>A sensor with a working mechanical design but roughly &plusmn;60 to 80% accuracy. I removed a calibration step that skewed the reference value, corrected for product variation across materials, and built a heat map algorithm that brought accuracy to about &plusmn;5% in standard operating conditions.</p>
+        <p>A sensor that had a mechanical design but roughly &plusmn;60 to 80% accuracy. I reworked the mechanical solution to function across its harsh operating range, removed a calibration step that skewed the reference value, and built a heat map algorithm that brought accuracy to about &plusmn;5% in standard operating conditions.</p>
       </div>
 
       <div class="item">
         <div>
-          <h3>High-speed data acquisition prototype</h3>
+          <h3>Fluid and environmental test rigs</h3>
           <div class="where">Precision Planting</div>
         </div>
-        <p>A 4-layer KiCad board and firmware for a multi-sensor prototype with high-speed ADC sampling and a fast data link. Two board revisions, both meeting the requirements for their prototype stage. Built with an AI-assisted workflow, then reviewed and validated on the bench.</p>
+        <p>Test equipment built around VFDs, blowers, pumps, pressure sensors, flow meters, and venturi product conveying, plus thermal chamber testing, with DAQ and analysis tools I wrote in Python, Julia, and C# that the rest of the team adopted.</p>
       </div>
 
       <div class="item">
         <div>
-          <h3>CAN analysis tools</h3>
+          <h3>Overmolded connector assembly</h3>
           <div class="where">Precision Planting</div>
         </div>
-        <p>Parsing and bus-monitoring tools for CAN and CAN FD traffic captured with ValueCAN and Kvaser interfaces, producing time-synchronized test stand data for analysis.</p>
+        <p>Mechanical design of an overmolded connector assembly that houses a circuit board in the back of the housing, with a cable and second connector coming out. It moves into production this winter.</p>
       </div>
 
       <div class="item">
@@ -281,7 +288,7 @@ footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; borde
           <h3>STEP assembly viewer</h3>
           <div class="where">Precision Planting</div>
         </div>
-        <p>A Python app, packaged as a standalone executable, that splits a STEP assembly into parts and renders views from the company model library. Product support now makes images themselves instead of asking engineering for screenshots, saving an estimated 4+ engineering hours per product.</p>
+        <p>A Python app, packaged as a standalone executable, that splits a STEP assembly into parts and renders views from the company model library. Product support makes their own images instead of asking engineering for screenshots, saving an estimated 4+ engineering hours per product.</p>
       </div>
 
     </div>
@@ -291,44 +298,74 @@ footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; borde
 <section id="home">
   <div class="wrap">
     <h2>Built at home</h2>
-    <div class="home">
-      <div>
-        <h3>Shop storage cabinet</h3>
-        <p>A 2x3x6 ft plywood cabinet planned in Fusion 360 to fit filament, motors, boards, and CNC bits into off-the-shelf organizers. Design to finish in about a week.</p>
+    <div class="cards">
+
+      <div class="card">
+        <div class="pair tall">
+          <img src="images/cabinet.jpg" alt="Finished shop storage cabinet, floor to ceiling with black handles" loading="lazy" width="800" height="1065">
+          <img src="images/cabinet_open.jpg" alt="Cabinet open, showing small-parts organizers and storage bins inside" loading="lazy" width="1100" height="1464">
+        </div>
+        <div class="body">
+          <h3>Shop storage cabinet</h3>
+          <p>A 2&times;3&times;6 ft cabinet planned in CAD to fit filament, motors, boards, and CNC bits into off-the-shelf organizers with no wasted space.</p>
+          <div class="specs">
+            <span><strong>Process:</strong> Fusion 360 model, then plywood build</span>
+            <span><strong>Timeline:</strong> about a week, design to finish</span>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3>Coffee cart</h3>
-        <p>A beverage cart for church use, sized to a tight footprint and modeled first so the dimensions were approved before any wood was cut.</p>
+
+      <div class="card">
+        <div class="pair">
+          <img src="images/cart_finished.jpg" alt="Finished coffee cart with dark top and pine paneling" loading="lazy" width="800" height="600">
+          <img src="images/cart_cad1.jpg" alt="3D CAD render of the coffee cart" loading="lazy" width="800" height="640">
+        </div>
+        <div class="body">
+          <h3>Coffee cart</h3>
+          <p>A beverage cart for church use, sized to a tight footprint and modeled first so the dimensions were signed off before any wood was cut.</p>
+          <div class="specs">
+            <span><strong>Process:</strong> CAD model, then wood build</span>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3>Gladiator combat robot</h3>
-        <p>A wedge-style robot for Robot Smashing League, designed to get under opponents and flip them. CAD design, 3D printed shell, competition build.</p>
+
+      <div class="card">
+        <div class="pair">
+          <img src="images/gladiator_action.jpg" alt="Gladiator combat robot flipping an opponent mid-match" loading="lazy" width="700" height="645">
+          <img src="images/gladiator_match.jpg" alt="Overhead view of the arena during a Gladiator match, Robot Smashing League" loading="lazy" width="1200" height="675">
+        </div>
+        <div class="body">
+          <h3>Gladiator combat robot</h3>
+          <p>A wedge-style combat robot built for Robot Smashing League, designed to get under opponents and flip them.</p>
+          <div class="specs">
+            <span><strong>Process:</strong> CAD design, 3D printed shell, competition build</span>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3>Vehicle logger app</h3>
-        <p>An Android app that logs OBD-II and phone sensor data to diagnose a truck problem, and tracks service and mileage. Built with AI assistance.</p>
-      </div>
+
     </div>
+    <p class="also">More of my CAD and code is on <a href="https://github.com/Josiah05230/personal-FreeCAD" target="_blank" rel="noopener">GitHub</a>.</p>
   </div>
 </section>
 
 <section class="skills" id="skills">
   <div class="wrap">
     <h2>Skills</h2>
-    <p><b>Design and CAD:</b> Creo, Fusion 360, DFM, GD&amp;T drawings, tolerance stack-up, injection molded, SLS, and machined part design.</p>
-    <p><b>Test and validation:</b> Test stand design, DAQ, thermal chamber testing, CPK and PPK studies, statistical validation.</p>
-    <p><b>Software and data:</b> Python, Julia, C#, Git, time-synchronized data pipelines, AI-assisted development.</p>
-    <p><b>Electronics:</b> KiCad, SPI and I2S firmware, high-speed ADC sampling, CAN and CAN FD analysis, LTspice.</p>
+    <p><b>Design and CAD:</b> Creo, Fusion 360, DFM, GD&amp;T drawings, tolerance stack-up, drawing and model revision control.</p>
+    <p><b>Manufacturing:</b> Injection molding, SLS, machining, sheet cutting, overmolding, supplier quoting, end-of-line testing.</p>
+    <p><b>Prototyping:</b> FDM and SLS 3D printing, rapid prototyping, custom lab and field fixtures.</p>
+    <p><b>Test and analysis:</b> Test stand design, fluid and pneumatic rigs, thermal chamber testing, DAQ, CPK and PPK, Python, Julia, C#, introductory CFD.</p>
   </div>
 </section>
 
 <section class="contact" id="contact">
   <div class="wrap">
     <h2>Contact</h2>
-    <p>I am looking for sensor, test, embedded, or product engineering work in the Fargo area or remote. The fastest way to reach me is email.</p>
+    <div class="headline">Have something to build? Send it over.</div>
+    <p>I am also looking for mechanical, product, or R&amp;D engineering work in the Fargo area or remote. Email is the fastest way to reach me.</p>
     <div class="links">
       <a href="mailto:josiahholder523@gmail.com">josiahholder523@gmail.com</a>
-      <a href="https://www.linkedin.com/in/josiahholder523">LinkedIn</a>
+      <a href="https://linkedin.com/in/josiahholder523" target="_blank" rel="noopener">LinkedIn</a>
       <a href="resume.pdf">Resume (PDF)</a>
     </div>
   </div>
@@ -336,7 +373,7 @@ footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; borde
 </main>
 
 <footer>
-  <div class="wrap">Josiah Holder, Fargo, ND. Last updated 2026.</div>
+  <div class="wrap"><span>Josiah Holder, Fargo, ND</span><span>Last updated 2026</span></div>
 </footer>
 
 </body>
