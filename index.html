@@ -35,14 +35,14 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans); font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 a { color: var(--accent); text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 h1, h2, h3 { margin: 0; text-wrap: balance; }
 p { margin: 0; }
 img { display: block; max-width: 100%; }
-.wrap { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
-@media (max-width: 600px) { .wrap { padding: 0 18px; } body { font-size: 16px; } }
+.wrap { max-width: 1400px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); }
+@media (max-width: 600px) { body { font-size: 16px; } }
 
 .top { border-bottom: 1px solid var(--line); background: var(--surface); }
 .top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
@@ -52,39 +52,39 @@ img { display: block; max-width: 100%; }
 .top nav a:hover { color: var(--ink); text-decoration: underline; }
 
 .hero { padding: 64px 0 60px; }
-.hero .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
+.hero .wrap { display: grid; grid-template-columns: 1.5fr 1fr; gap: 72px; align-items: center; }
 @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; gap: 36px; } .hero { padding: 40px 0; } .portrait { order: -1; max-width: 300px; } }
 .hero h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 4.6vw, 3.3rem); line-height: 1.1; letter-spacing: -0.01em; }
-.hero p.sub { margin-top: 22px; font-size: 1.12rem; color: var(--ink-soft); max-width: 46ch; }
+.hero p.sub { margin-top: 22px; font-size: 1.15rem; color: var(--ink-soft); max-width: 52ch; }
 .hero .cta { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
 .btn { display: inline-block; padding: 11px 20px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; border: 1.5px solid var(--accent); }
 .btn.solid { background: var(--accent); color: var(--surface); }
 .btn.ghost { color: var(--accent); }
 .btn:hover { filter: brightness(1.1); }
-.portrait img { width: 100%; height: auto; max-height: 460px; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 10%; border-radius: 10px; border: 1px solid var(--line); }
+.portrait img { width: 100%; height: auto; max-height: 520px; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 10%; border-radius: 10px; border: 1px solid var(--line); }
 
 section { padding: 56px 0; border-top: 1px solid var(--line); }
 section h2 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; margin-bottom: 26px; }
 
-.about p { max-width: 62ch; font-size: 1.08rem; margin-bottom: 16px; }
+.about p { max-width: 80ch; font-size: 1.08rem; margin-bottom: 16px; }
 
-.two { display: grid; grid-template-columns: 200px 1fr; gap: 12px 40px; }
+.two { display: grid; grid-template-columns: 260px 1fr; gap: 12px 56px; }
 @media (max-width: 720px) { .two { grid-template-columns: 1fr; } }
 .when { color: var(--ink-soft); font-size: 0.95rem; }
 .entry { margin-bottom: 30px; }
 .entry h3 { font-size: 1.1rem; font-weight: 600; }
 .entry .org { color: var(--ink-soft); }
 .entry ul { margin: 10px 0 0; padding-left: 20px; }
-.entry li { margin-bottom: 6px; max-width: 70ch; }
+.entry li { margin-bottom: 7px; max-width: 100ch; }
 
 .work { display: grid; gap: 34px; }
-.item { display: grid; grid-template-columns: 200px 1fr; gap: 8px 40px; }
+.item { display: grid; grid-template-columns: 260px 1fr; gap: 8px 56px; }
 @media (max-width: 720px) { .item { grid-template-columns: 1fr; } }
 .item h3 { font-size: 1.05rem; font-weight: 600; }
 .item .where { color: var(--ink-soft); font-size: 0.92rem; margin-top: 2px; }
-.item p { max-width: 68ch; }
+.item p { max-width: 96ch; }
 
-figure.diagram { margin: 22px 0 0; max-width: 460px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 16px 12px; }
+figure.diagram { margin: 22px 0 0; max-width: 520px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 16px 12px; }
 figure.diagram svg { width: 100%; height: auto; display: block; }
 figure.diagram figcaption { margin-top: 8px; font-size: 0.85rem; color: var(--ink-soft); }
 .curve { fill: none; stroke: var(--ink); stroke-width: 2.2; }
@@ -95,7 +95,7 @@ figure.diagram figcaption { margin-top: 8px; font-size: 0.85rem; color: var(--in
 .dlabel { fill: var(--ink); font: 600 13px var(--sans); }
 .dsmall { fill: var(--ink-soft); font: 400 12px var(--sans); }
 
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--line); }
 .pair img { width: 100%; height: auto; object-fit: cover; aspect-ratio: 4 / 3; }
@@ -107,11 +107,11 @@ figure.diagram figcaption { margin-top: 8px; font-size: 0.85rem; color: var(--in
 .card .specs strong { color: var(--ink); font-weight: 600; }
 .also { margin-top: 26px; max-width: 68ch; color: var(--ink-soft); }
 
-.skills p { margin-bottom: 8px; max-width: 75ch; }
+.skills p { margin-bottom: 10px; max-width: 110ch; }
 .skills b { font-weight: 600; }
 
 .contact .headline { font-family: var(--display); font-weight: 700; font-size: 1.3rem; margin-bottom: 14px; }
-.contact p { max-width: 52ch; margin-bottom: 18px; color: var(--ink-soft); }
+.contact p { max-width: 64ch; margin-bottom: 18px; color: var(--ink-soft); }
 .contact .links { display: flex; gap: 22px; flex-wrap: wrap; }
 footer { padding: 28px 0 40px; color: var(--ink-soft); font-size: 0.88rem; border-top: 1px solid var(--line); }
 footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
@@ -137,7 +137,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   <div class="wrap">
     <div>
       <h1>Mechanical engineer. Hands-on builder.</h1>
-      <p class="sub">I design and prototype agricultural sensor hardware, build the test rigs that prove it works, and take it into production. At home, I build whatever the garage needs.</p>
+      <p class="sub">I develop agricultural sensor hardware from prototype to production, covering mechanical design, manufacturing, and testing. In my spare time, I build whatever the garage needs.</p>
       <div class="cta">
         <a class="btn solid" href="resume.pdf">Download resume</a>
         <a class="btn ghost" href="mailto:josiahholder523@gmail.com">Email me</a>
@@ -152,8 +152,9 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 <section class="about" id="about">
   <div class="wrap">
     <h2>About</h2>
-    <p>NDSU mechanical engineering, December 2024. I work in Research and Advanced Engineering at Precision Planting, taking products from concept through prototyping, testing, and production. I spend most of my time on the bench and in the field, running the tests that prove a design works and talking with the farmers and dealers who use it.</p>
-    <p>Outside of work I build things at home when the garage needs something. It's usually just an excuse to model it in CAD first.</p>
+    <p>I am a mechanical engineer in the Research and Advanced Engineering group at Precision Planting in Fargo, where I develop seed-flow sensors for air seeders. I graduated from NDSU in December 2024 and have worked in R&amp;D since March 2023.</p>
+    <p>Most of my time goes to design, bench and field testing, and working with suppliers. I also spend time with farmers and dealers to understand how the product is used and where it can be improved.</p>
+    <p>Outside of work, I build things at home when the garage needs something. It's usually just an excuse to model it in CAD first.</p>
   </div>
 </section>
 
@@ -162,28 +163,27 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
     <h2>Experience</h2>
 
     <div class="entry two">
-      <div class="when">Jan 2025 to present</div>
+      <div class="when">January 2025 to present</div>
       <div>
         <h3>R&amp;D Engineer</h3>
         <div class="org">Precision Planting, Fargo, ND</div>
         <ul>
-          <li>Developed three mechanical designs for an optical seed-flow sensor (injection molded, SLS printed for production, machined, and sheet cut), quoted them with multiple manufacturers, and chose the lowest-cost option with no loss in usability.</li>
-          <li>Manage CAD, models, and drawings from prototype into production, with GD&amp;T callouts and tolerance stack-up control. Tightening the design cut sensor-to-sensor variance about 3x.</li>
-          <li>Built the test stands and analysis that prove a design meets spec, including a validation system for a &plusmn;2% requirement and fluid test rigs with VFDs, blowers, pumps, flow meters, and venturi product conveying.</li>
-          <li>Design overmolded connectors and adapter harnesses, and work with suppliers and contract manufacturers on cost and end-of-line testing.</li>
-          <li>Visit farms and dealers to understand the problem and gather feedback on what to keep and improve.</li>
+          <li>Designed three mechanical concepts for an optical seed-flow sensor, obtained quotes from multiple suppliers, and selected the lowest-cost design without sacrificing usability.</li>
+          <li>Maintain CAD models and production drawings from prototype through release, applying GD&amp;T and tolerance stack-up analysis. Reduced sensor-to-sensor variance by roughly 3x.</li>
+          <li>Developed the test stand, control software, and data analysis used to validate the sensor against its &plusmn;2% accuracy requirement.</li>
+          <li>Meet with farmers and dealers to gather feedback, and work with suppliers and contract manufacturers on cost and end-of-line testing.</li>
         </ul>
       </div>
     </div>
 
     <div class="entry two">
-      <div class="when">Mar 2023 to Jan 2025</div>
+      <div class="when">March 2023 to January 2025</div>
       <div>
         <h3>R&amp;D Engineering Intern</h3>
         <div class="org">Appareo Systems (Intelligent Ag), Fargo, ND</div>
         <ul>
-          <li>Rescued a sensor program at risk of cancellation. I took a mechanical design from non-functional to working, optimized it to hold accuracy across a harsh operating range, and built a heat map algorithm to finish the job.</li>
-          <li>Owned lab and field testing, test stands, and data analysis for the project, at a full engineer's workload.</li>
+          <li>Recovered a sensor program at risk of cancellation by reworking the mechanical design to perform across a demanding operating range and developing an algorithm that improved accuracy from roughly &plusmn;60 to 80% to &plusmn;5%.</li>
+          <li>Planned and ran lab and field testing, built test stands, and analyzed data, carrying the responsibilities of a full-time engineer.</li>
         </ul>
       </div>
     </div>
@@ -194,7 +194,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <h3>Foreman</h3>
         <div class="org">Faul Building and Repair, Fargo, ND</div>
         <ul>
-          <li>Ran a crew of up to eight on demolition, framing, and repair jobs, training and delegating. Most of what I know about managing people actually came from this job.</li>
+          <li>Supervised a crew of up to eight on demolition, framing, and repair projects, and served as the main point of contact for the owner and customers. Most of what I know about managing people came from this job.</li>
         </ul>
       </div>
     </div>
@@ -205,7 +205,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <h3>High school intern</h3>
         <div class="org">Appareo, Fargo, ND</div>
         <ul>
-          <li>Production data analysis and manufacturing quality checks, running Cpk and Ppk against tolerance and standard deviation.</li>
+          <li>Analyzed production data and ran manufacturing quality checks, calculating Cpk and Ppk against tolerance and standard deviation.</li>
         </ul>
       </div>
     </div>
@@ -230,16 +230,16 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <h3>Sensor mechanical design</h3>
           <div class="where">Precision Planting</div>
         </div>
-        <p>Three full mechanical designs for an optical seed-flow sensor, made with injection molding, SLS printing for production, machining, and sheet cutting. I quoted each with multiple manufacturers and picked the lowest-cost option with no loss in ease of use. I own the CAD and drawings from prototype into production, using GD&amp;T (flatness, surface finish, ordinate dimensioning) and tolerance stack-up analysis. Tightening the design cut sensor-to-sensor variance about 3x.</p>
+        <p>Developed three mechanical designs for an optical seed-flow sensor using injection molding, SLS printing for production, machining, and sheet cutting. Each design was quoted with multiple manufacturers, and the lowest-cost option was selected with no loss in ease of use. I maintain the CAD and drawings from prototype into production, applying GD&amp;T (flatness, surface finish, and ordinate dimensioning) and tolerance stack-up analysis. Tighter tolerances and assembly changes reduced sensor-to-sensor variance by roughly 3x.</p>
       </div>
 
       <div class="item">
         <div>
-          <h3>Sensor validation system</h3>
+          <h3>Sensor validation</h3>
           <div class="where">Precision Planting</div>
         </div>
         <div>
-          <p>A test stand, control software, data recording, and analysis pipeline for the same sensor. It produced the statistical evidence for whether the design met its &plusmn;2% requirement, and extended its measurement range about 80%. I ran 50+ sensors on the bench and analyzed data from 250+ installed on farmer equipment over two seasons.</p>
+          <p>Designed the test stand, control software, and analysis process used to show whether the sensor met its &plusmn;2% accuracy requirement, and increased its measurement range by about 80%. Testing covered more than 50 sensors on the bench and more than 250 installed on farmer equipment over two seasons, with 95% of units falling within &plusmn;2% of the mean.</p>
           <figure class="diagram" aria-labelledby="fig-cap">
             <svg viewBox="0 0 420 250" role="img" aria-label="A bell curve of sensor error with the region inside plus or minus 2 percent shaded green and the tails shaded orange.">
               <path class="tailfill" d="M20,210 L20,209.8 L38,209.4 L56,208.6 L74,207.2 L92,204.8 L110,201 L128,195.4 L134,192.6 L134,210 Z"/>
@@ -261,18 +261,18 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 
       <div class="item">
         <div>
-          <h3>Heat map accuracy algorithm</h3>
+          <h3>Sensor accuracy recovery</h3>
           <div class="where">Appareo Systems (Intelligent Ag)</div>
         </div>
-        <p>A sensor that had a mechanical design but roughly &plusmn;60 to 80% accuracy. I reworked the mechanical solution to function across its harsh operating range, removed a calibration step that skewed the reference value, and built a heat map algorithm that brought accuracy to about &plusmn;5% in standard operating conditions.</p>
+        <p>Took over a sensor with a mechanical design but accuracy of roughly &plusmn;60 to 80%. I reworked the mechanical solution to perform across its operating range, eliminated a calibration step that skewed the reference value, and developed a heat map algorithm that brought accuracy to about &plusmn;5% under standard operating conditions.</p>
       </div>
 
       <div class="item">
         <div>
-          <h3>Fluid and environmental test rigs</h3>
+          <h3>Fluid and environmental test equipment</h3>
           <div class="where">Precision Planting</div>
         </div>
-        <p>Test equipment built around VFDs, blowers, pumps, pressure sensors, flow meters, and venturi product conveying, plus thermal chamber testing, with DAQ and analysis tools I wrote in Python, Julia, and C# that the rest of the team adopted.</p>
+        <p>Built test equipment using variable frequency drives, blowers, pumps, pressure sensors, flow meters, and venturi product conveying, and performed environmental testing in a thermal chamber. Wrote the data acquisition and analysis tools in Python, Julia, and C#, which the rest of the team now uses.</p>
       </div>
 
       <div class="item">
@@ -280,7 +280,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <h3>Overmolded connector assembly</h3>
           <div class="where">Precision Planting</div>
         </div>
-        <p>Mechanical design of an overmolded connector assembly that houses a circuit board in the back of the housing, with a cable and second connector coming out. It moves into production this winter.</p>
+        <p>Designed the mechanical components of an overmolded connector assembly that houses a circuit board in the back of the housing, with a cable and second connector extending from it. The assembly moves into production this winter.</p>
       </div>
 
       <div class="item">
@@ -288,7 +288,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <h3>STEP assembly viewer</h3>
           <div class="where">Precision Planting</div>
         </div>
-        <p>A Python app, packaged as a standalone executable, that splits a STEP assembly into parts and renders views from the company model library. Product support makes their own images instead of asking engineering for screenshots, saving an estimated 4+ engineering hours per product.</p>
+        <p>Developed a Python application that splits STEP assemblies into individual parts and renders views from the company model library. Product support can now create their own documentation images instead of requesting screenshots from engineering, saving an estimated four or more engineering hours per product.</p>
       </div>
 
     </div>
@@ -307,7 +307,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         </div>
         <div class="body">
           <h3>Shop storage cabinet</h3>
-          <p>A 2&times;3&times;6 ft cabinet planned in CAD to fit filament, motors, boards, and CNC bits into off-the-shelf organizers with no wasted space.</p>
+          <p>A 2 x 3 x 6 ft cabinet designed in Fusion 360 and built from plywood, with off-the-shelf organizers sized to hold filament, motors, boards, and CNC bits.</p>
           <div class="specs">
             <span><strong>Process:</strong> Fusion 360 model, then plywood build</span>
             <span><strong>Timeline:</strong> about a week, design to finish</span>
@@ -322,7 +322,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         </div>
         <div class="body">
           <h3>Coffee cart</h3>
-          <p>A beverage cart for church use, sized to a tight footprint and modeled first so the dimensions were signed off before any wood was cut.</p>
+          <p>A beverage cart built for church use. I modeled it in CAD first so the dimensions could be approved before any wood was cut.</p>
           <div class="specs">
             <span><strong>Process:</strong> CAD model, then wood build</span>
           </div>
@@ -336,7 +336,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         </div>
         <div class="body">
           <h3>Gladiator combat robot</h3>
-          <p>A wedge-style combat robot built for Robot Smashing League, designed to get under opponents and flip them.</p>
+          <p>A wedge-style combat robot for Robot Smashing League, with a 3D printed shell and a low profile designed to get under opponents and flip them.</p>
           <div class="specs">
             <span><strong>Process:</strong> CAD design, 3D printed shell, competition build</span>
           </div>
@@ -351,10 +351,10 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 <section class="skills" id="skills">
   <div class="wrap">
     <h2>Skills</h2>
-    <p><b>Design and CAD:</b> Creo, Fusion 360, DFM, GD&amp;T drawings, tolerance stack-up, drawing and model revision control.</p>
+    <p><b>CAD and drawings:</b> Creo, Fusion 360, GD&amp;T, tolerance stack-up analysis, design for manufacturability, revision control.</p>
     <p><b>Manufacturing:</b> Injection molding, SLS, machining, sheet cutting, overmolding, supplier quoting, end-of-line testing.</p>
-    <p><b>Prototyping:</b> FDM and SLS 3D printing, rapid prototyping, custom lab and field fixtures.</p>
-    <p><b>Test and analysis:</b> Test stand design, fluid and pneumatic rigs, thermal chamber testing, DAQ, CPK and PPK, Python, Julia, C#, introductory CFD.</p>
+    <p><b>Prototyping and testing:</b> FDM and SLS 3D printing, test stand design, fluid and pneumatic test equipment, thermal chamber testing, data acquisition, CPK and PPK studies.</p>
+    <p><b>Software and analysis:</b> Python, Julia, C#, Git, statistical analysis, introductory CFD.</p>
   </div>
 </section>
 
@@ -362,7 +362,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   <div class="wrap">
     <h2>Contact</h2>
     <div class="headline">Have something to build? Send it over.</div>
-    <p>I am also looking for mechanical, product, or R&amp;D engineering work in the Fargo area or remote. Email is the fastest way to reach me.</p>
+    <p>I am currently looking for mechanical, product development, or R&amp;D engineering roles in the Fargo area or remote. Email is the best way to reach me.</p>
     <div class="links">
       <a href="mailto:josiahholder523@gmail.com">josiahholder523@gmail.com</a>
       <a href="https://linkedin.com/in/josiahholder523" target="_blank" rel="noopener">LinkedIn</a>
